@@ -1,0 +1,14 @@
+query Show ($id: ID!) {
+  show(id: $id) {
+    id
+    genres
+    image {
+      medium
+      original
+    }
+    language
+    name
+    summary
+    type
+  }
+}

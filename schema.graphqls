@@ -1,0 +1,45 @@
+type Image {
+  medium: String
+  original: String
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+type LoginPayload {
+  token: String
+  refreshToken: String
+}
+
+type Mutation {
+  _empty: String @deprecated(reason: "Dummy field")
+  login(input: LoginInput!): LoginPayload!
+}
+
+type Query {
+  _empty: String @deprecated(reason: "Dummy field")
+  hello: String
+  user(id: ID!): User
+  show(id: ID!): Show
+  me: User
+}
+
+type Show {
+  id: ID!
+  name: String!
+  type: String
+  language: String
+  genres: [String]!
+  image: Image!
+  summary: String
+}
+
+type User {
+  id: ID!
+  name: String!
+  isAdmin: Boolean
+  isBanned: Boolean
+}
+

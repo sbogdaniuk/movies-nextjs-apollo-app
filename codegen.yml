@@ -1,0 +1,11 @@
+overwrite: true
+schema: "schema.graphqls"
+documents: "graphql/**/*.graphql"
+generates:
+  generated/apolloComponents.tsx:
+    config:
+      noNamespaces: true
+    plugins:
+      - "typescript-common"
+      - "typescript-client"
+      - "typescript-react-apollo"

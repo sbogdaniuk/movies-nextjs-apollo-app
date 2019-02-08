@@ -11,6 +11,7 @@ const IndexPage: React.FunctionComponent = () => {
     <Layout title="Home | Next.js + TypeScript Example">
       <h1>hello Next.js 👋</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet dignissimos, dolore ea enim eos esse eum ex laudantium odit optio, placeat porro ratione reiciendis unde vel veniam veritatis voluptatibus!</p>
+      <p>NODE_ENV: {String(process.env.NODE_ENV)}</p>
       <ul>
         {shows.map(id => (
           <li key={id}>

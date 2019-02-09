@@ -1,0 +1,15 @@
+version: "3.6"
+services:
+
+  movies:
+    container_name: movies-container
+    image: sbogdaniuk/movies:latest
+    ports:
+      - "8080:3000"
+    volumes:
+      - ./:/usr/src/app
+    networks:
+      - default
+
+volumes:
+  pages:
